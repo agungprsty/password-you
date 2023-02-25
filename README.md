@@ -15,7 +15,6 @@ This application is being developed in following requirement :
 ```
 FLASK_APP_NAME=password-you
 FLASK_DEBUG=<0 | 1>
-
 ```
 
 - copy ``config/config.py.example`` to ``config/config.py``
