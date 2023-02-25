@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import bcrypt
+from core.app import init
+from src.utils import safe_int
+__server = init()
 
-password = b"super secret password"
-# Hash a password for the first time, with a certain number of rounds
-hashed = bcrypt.hashpw(password, bcrypt.gensalt(14))
-# Check that a unhashed password matches one that has previously been
-#   hashed
-if bcrypt.checkpw(password, hashed):
-    print("It Matches!")
-else:
-    print("It Does not Match :(")
+if __name__ == '__main__':
+    __server.run(
+        host='0.0.0.0', 
+        port=safe_int(
+            __server.config\
+                .get("GENERAL", {})\
+                .get("app_port", 8000)
+        )
+    )

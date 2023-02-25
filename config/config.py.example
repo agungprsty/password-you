@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# general
+GENERAL = {
+    "app_name": "password-you",
+    "app_port": 8001,
+    "time_zone": "Asia/Jakarta",
+    "base_url": "http://localhost:8001",
+    "localization": "id_id",
+    "lang": "id",
+}
+
+# logging
+LOGGING = {
+    "http": {
+        "logging_level": "WARNING",
+        "log_file": "./log/http.log",
+    }
+}
+
+# session and security
+SECURITY = {
+    "flask_secret_key": "<random string key>",
+    "jwt_secret_key": "<obtain from generate_key.py>",
+    "fernet_key": "<obtain from generate_key.py>",
+    "salt": "<obtain from generate_key.py>",
+}
+
+# database
+MONGODB = {
+    "host": "localhost",
+    "port": 27017,
+    "username": "<username>",
+    "password": "<password>",
+    "db": "<db_name>",
+    "connect": False,
+    "tls": True,
+    "tlsAllowInvalidCertificates": True,
+} 
+
+# flask
+JSON_SORT_KEYS = False
