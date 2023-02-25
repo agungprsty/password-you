@@ -10,3 +10,39 @@ This application is being developed in following requirement :
 ### Installation 
 - clone project
 - pip install -U pip & pip install -r requirements.txt
+- set env variable : 
+
+```
+FLASK_APP_NAME=password-you
+FLASK_DEBUG=<0 | 1>
+
+```
+
+- copy ``config/config.py.example`` to ``config/config.py``
+- set configuration as your needs 
+- for ``SECURITY`` section, acquire a new one (if you don't have one) by run : 
+
+```
+python3 generate_key.py
+```
+
+### Running
+
+#### API service  
+```
+./run.sh
+```
+
+### Unit testing
+
+```
+./unit_test.sh
+```
+
+### Unit test report
+
+After run unit test command, run following command
+
+```
+coverage report
+```
