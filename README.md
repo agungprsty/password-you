@@ -1,5 +1,7 @@
 ## PASSWORD YOU
 
+![coverage badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/agungprsty/0bd00bdb55473f9289eb4c38dc963ffb/raw/covbadge.json)
+
 The Password-You password generator creates random passwords based on parameters set by you.
 
 ### Requirement
