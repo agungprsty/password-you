@@ -78,7 +78,8 @@ jobs:
       - name: "Make badge"
         uses: schneegans/dynamic-badges-action@v1.6.0
         with:
-          auth: ${{ secrets.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 }}
+          # GIST_TOKEN is a GitHub personal access token with scope "gist".
+          auth: ${{ secrets.GITHUB_TOKEN }}
           gistID: 0bd00bdb55473f9289eb4c38dc963ffb
           filename: covbadge.json
           label: Coverage
