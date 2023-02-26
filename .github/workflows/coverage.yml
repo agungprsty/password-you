@@ -54,19 +54,12 @@ jobs:
       - name: "Check out the repo"
         uses: "actions/checkout@v3"
 
-      - name: "Set up Python"
-        uses: "actions/setup-python@v4"
-        with:
-          python-version: "${{ matrix.python-version }}"
-          cache: pip
-          cache-dependency-path: 'requirements/*.pip'
-
       - name: "Install dependencies"
         run: |
           set -xe
           python -VV
           python -m site
-          python -m pip install --require-hashes -r requirements/tox.pip
+          python -m pip install tox tox-gh-actions
 
       - name: "Run tox coverage for ${{ matrix.python-version }}"
         env:
