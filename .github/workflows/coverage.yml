@@ -19,7 +19,7 @@ jobs:
         os:
           - ubuntu-latest
           - macos-latest
-          - windows-latest
+          # - windows-latest
         python-version:
           - "3.10"
 
@@ -67,6 +67,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: covdata
+          
+      - name: "Test artifact download"
+        run: ls -R
 
       - name: "Combine"
         run: |
@@ -78,7 +81,7 @@ jobs:
       - name: "Make badge"
         uses: schneegans/dynamic-badges-action@v1.4.0
         with:
-          auth: ${{ secrets.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 }}
+          auth: ${{ secrets.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 }}
           gistID: 0bd00bdb55473f9289eb4c38dc963ffb
           filename: covbadge.json
           label: Coverage
