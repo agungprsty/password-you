@@ -25,10 +25,10 @@ jobs:
 
     steps:
       - name: "Check out the repo"
-        uses: "actions/checkout@v2"
+        uses: "actions/checkout@v3"
 
       - name: "Set up Python"
-        uses: "actions/setup-python@v2"
+        uses: "actions/setup-python@v4"
         with:
           python-version: "${{ matrix.python-version }}"
 
@@ -52,10 +52,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out the repo"
-        uses: "actions/checkout@v2"
+        uses: "actions/checkout@v3"
 
       - name: "Set up Python"
-        uses: "actions/setup-python@v2"
+        uses: "actions/setup-python@v4"
         with:
           python-version: "3.10"
 
@@ -78,7 +78,7 @@ jobs:
       - name: "Make badge"
         uses: schneegans/dynamic-badges-action@v1.4.0
         with:
-          auth: ${{ secrets.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 }}
+          auth: ${{ secrets.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 }}
           gistID: 0bd00bdb55473f9289eb4c38dc963ffb
           filename: covbadge.json
           label: Coverage
