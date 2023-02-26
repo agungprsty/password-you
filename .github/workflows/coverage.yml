@@ -78,7 +78,7 @@ jobs:
       - name: "Make badge"
         uses: schneegans/dynamic-badges-action@v1.4.0
         with:
-          auth: ${{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}}
+          auth: ${{ secrets.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 }}
           gistID: 0bd00bdb55473f9289eb4c38dc963ffb
           filename: covbadge.json
           label: Coverage
