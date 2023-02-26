@@ -1,4 +1,4 @@
-name: "Test and coverage Suite"
+name: "Coverage"
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: metacov
-          path: .coverage.*
+          path: .coverage*
 
   coverage:
     name: Coverage
