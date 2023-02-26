@@ -66,6 +66,6 @@ db/seeder/config.ini
 
 # docker
 docker/
-# .coverage
+.coverage
 coverage.xml
 .githubb
